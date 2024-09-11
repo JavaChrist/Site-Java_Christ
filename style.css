@@ -179,11 +179,36 @@ body {
   min-height: 100vh;
 }
 
-.about-img img {
+.about-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-img {
   padding-bottom: 20%;
   height: 500px;
   width: 500px;
   border-radius: 50%;
+}
+
+.ai-badge {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin-top: 10px; /* Ajustez cette valeur pour l'espace entre l'avatar et le badge */
+}
+
+.ai-icon {
+  width: 200px; /* Ajustez la taille selon vos besoins */
+  height: 200px;
+}
+
+.ai-badge span {
+  color: #0ef;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .about-text h2 {
@@ -298,6 +323,52 @@ body {
 
 .services-list div:hover {
   transform: translateY(-10px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: 0 auto;
+  background-color: #081b29;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #0ef;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #0ef;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 section {
