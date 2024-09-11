@@ -539,6 +539,17 @@ form textarea {
   margin-top: 70px;
 }
 
+.license-link {
+  color: #0ef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.license-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .top {
   position: fixed;
   bottom: 2.1rem;

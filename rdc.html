@@ -4,9 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #081b29;
+      }
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .button-container {
+        display: flex;
+        gap: 20px;
+      }
+      .last-text {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: rgb(7, 85, 91);
+        margin-top: auto;
+      }
+    </style>
   </head>
   <body>
-    <!-- Calendly badge widget begin -->
+    <div class="content">
+      <div class="button-container">
+        <a href="#" id="calendly-button" class="btn-box">Prendre rendez-vous</a>
+        <a href="frensh.html" class="btn-box">Retour à l'accueil</a>
+      </div>
+    </div>
+
+    <!-- Calendly link widget begin -->
     <link
       href="https://assets.calendly.com/assets/external/widget.css"
       rel="stylesheet"
@@ -17,16 +52,23 @@
       async
     ></script>
     <script type="text/javascript">
-      window.onload = function () {
-        Calendly.initBadgeWidget({
-          url: "https://calendly.com/contact-javachrist",
-          text: "Schedule time with me",
-          color: "#00eeff",
-          textColor: "#1a1a1a",
-          branding: true,
+      document
+        .getElementById("calendly-button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          Calendly.initPopupWidget({
+            url: "https://calendly.com/contact-javachrist",
+          });
+          return false;
         });
-      };
     </script>
-    <!-- Calendly badge widget end -->
+    <!-- Calendly link widget end -->
+
+    <div class="last-text">
+      <p>
+        Développé avec amour par Grohens Christian © 2024 |
+        <a href="license.html" class="license-link">Licence MIT</a>
+      </p>
+    </div>
   </body>
 </html>
