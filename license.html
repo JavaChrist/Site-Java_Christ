@@ -5,54 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Licence MIT - JavaChrist</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #081b29;
-      }
-      .content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 300px; /* Augmenté pour laisser plus d'espace en haut */
-        padding-bottom: 40px; /* Ajouté pour l'espace en bas */
-      }
-      .license-content {
-        max-width: 1000px; /* Augmenté pour plus de largeur */
-        width: 90%; /* Ajouté pour la responsivité */
-        margin: 0 auto;
-        padding: 40px; /* Augmenté pour plus d'espace intérieur */
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-      }
-      .license-content h1 {
-        text-align: center;
-        margin-bottom: 30px; /* Espace sous le titre */
-        color: #0ef; /* Couleur assortie au thème */
-        margin: 20px;
-      }
-      .license-content pre {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        font-size: 16px; /* Taille de police augmentée */
-        line-height: 1.6; /* Espacement des lignes augmenté */
-        color: #ededed; /* Couleur de texte plus claire */
-      }
-      .last-text {
-        width: 100%;
-        text-align: center;
-        padding: 25px 0;
-        background: rgb(7, 85, 91);
-        margin-top: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="licence.css" />
   </head>
+
   <body>
+    <!-- En-tête avec logo et navigation -->
     <header class="header">
       <div id="logo">
         <img
@@ -66,7 +23,8 @@
       </nav>
     </header>
 
-    <div class="content">
+    <!-- Section principale contenant le texte de la licence -->
+    <main class="content">
       <section class="license-content">
         <h1>Licence MIT</h1>
         <pre>
@@ -80,10 +38,13 @@ La notice de copyright ci-dessus et cette note d'autorisation doivent être incl
 LE LOGICIEL EST FOURNI "TEL QUEL", SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'EN LIMITER AUX GARANTIES DE QUALITÉ MARCHANDE, D'APTITUDE À UN USAGE PARTICULIER ET DE NON-CONTREFAÇON. EN AUCUN CAS, LES AUTEURS OU LES TITULAIRES DES DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DU LOGICIEL OU DE L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.
         </pre>
       </section>
-    </div>
+    </main>
 
-    <div class="last-text">
-      <p>Développé avec amour par Grohens Christian © 2024</p>
-    </div>
+    <!-- Pied de page -->
+    <footer>
+      <div class="last-text">
+        <p>Développé avec amour par Grohens Christian © 2024</p>
+      </div>
+    </footer>
   </body>
 </html>

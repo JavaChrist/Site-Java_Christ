@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- En-tête avec logo et navigation -->
   <header class="header">
     <div id="logo"> <img src="/assets/images/Fichier 10@3x-8.png" alt="JavaChrist" height="60px"> </div>
     <nav class="navbar">
+        <!-- Liens de navigation -->
       <a href="#" style=" --i:1">Accueil</a>
       <a href="#about" style=" --i:2">Info</a>
       <a href="#services" style=" --i:3">Services</a>
@@ -23,10 +25,13 @@
       <a href="login.html" style=" --i:8">Login</a>
     </nav>
   </header>
+
+    <!-- Section d'accueil avec vidéo en arrière-plan -->
   <section class="home">
     <div class="bloc">
         <video src="./assets/images/code.mp4" autoplay muted loop></video>
     <div class="home-content">
+       <!-- Contenu de la section d'accueil -->
       <h3>Bonjour, Moi c'est</h3>
       <h1>Christian Grohens</h1>
       <h3>Je suis <span class="text"></span></h3>
@@ -44,8 +49,11 @@
     </div>
 </div>
   </section>
+
+   <!-- Section "À propos" avec image de profil et description -->
   <section class="about" id="about">
     <div class="about-img">
+            <!-- Image de profil et badge AI -->
         <img
           src="/assets/images/Avatar 4.png"
           alt="image de profil"
@@ -77,11 +85,14 @@
 
     </div>
   </section>
+
+    <!-- Section "Services" présentant les différents services offerts -->
   <section>
     <div class="services" id="services">
       <div class="container">
         <h1 class="sub-title">Mes <span>Services</span></h1>
         <div class="services-list">
+                  <!-- Liste des services -->
           <div>
             <i class='bx bx-crop' style='color:#00eeff'></i>
             <h2>Web creation</h2>
@@ -123,10 +134,24 @@
     </div>
   </section>
 
+  <!-- Section pour la modale des services -->
+  <section class="modal-section">
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <!-- Contenu de la modale -->
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Section "Projets" montrant des exemples de travaux récents -->
   <section>
     <div id="project">
       <div class="main-text" id="project">
         <h2>Dernier<span> Projet</span></h2>
+        <!-- Exemples de projets -->
         <div class="portfolio-content">
           <div class="row">
             <img src="/assets/images/UI-UX.jpg" alt="Grande lettre jaune 3D UI-UX" height="350px">
@@ -170,8 +195,10 @@
     </div>
   </section>
 
+    <!-- Section "Contact" avec formulaire et informations de contact -->
   <section class="contact" id="contact">
       <div class="contact-text">
+         <!-- Informations de contact et liens sociaux -->
       <h2>Contacter <span>Moi</span></h2>
       <h4>Travaillons ensemble</h4>
       <p>Remplissez le formulaire ci-dessous pour nous faire parvenir vos idées, projets ou questions. Nous avons hâte
@@ -189,9 +216,8 @@
             class='bx bxl-linkedin'></i></a>
         <a href="https://github.com/JavaChrist" target="_blank" style="--i:10"><i class='bx bxl-github'></i></a>
       </div>
-
     </div>
-
+        <!-- Formulaire de contact -->
     <div class="contact-form">
       <form action="mailto:contact@javachrist.fr" method="post" enctype="text/plain">
         <input type="text" name="nom" placeholder="Entrez votre nom" required>
@@ -203,21 +229,19 @@
     </div>
   </section>
 
-  <div class="last-text">
-    <p> Développé avec amour par Grohens Christian © 2024 | 
-      <a href="license.html" class="license-link">Licence MIT</a>
-    </p>
-  </div>
-  <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
-  <script src="script.js"></script>
+   <!-- Pied de page avec copyright et lien vers la licence -->
+    <footer>
+      <div class="last-text">
+        <p> Développé avec amour par Grohens Christian © 2024 | 
+          <a href="license.html" class="license-link">Licence MIT</a>
+        </p>
+      </div>
+    </footer>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modal-title"></h2>
-      <p id="modal-text"></p>
-    </div>
-  </div>
+   <!-- Bouton de retour en haut de page -->
+    <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+
+  <script src="script.js"></script>
   <script src="modal.js"></script>
 </body>
 

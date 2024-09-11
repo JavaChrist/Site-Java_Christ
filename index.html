@@ -14,7 +14,9 @@
   </head>
 
   <body>
+    <!-- En-tête avec logo et navigation -->
     <header class="header">
+      <!-- ... contenu de l'en-tête ... -->
       <div id="logo">
         <img
           src="/assets/images/Fichier 10@3x-8.png"
@@ -32,7 +34,10 @@
         <a href="login.html" style="--i: 8">Login</a>
       </nav>
     </header>
+
+    <!-- Section d'accueil avec vidéo en arrière-plan -->
     <section class="home" id="home">
+      <!-- ... contenu de la section d'accueil ... -->
       <div class="bloc">
         <video src="./assets/images/code.mp4" autoplay muted loop></video>
         <div class="home-content">
@@ -65,7 +70,10 @@
         </div>
       </div>
     </section>
+
+    <!-- Section "À propos" avec image de profil et description -->
     <section class="about" id="about">
+      <!-- ... contenu de la section "À propos" ... -->
       <div class="about-img">
         <img
           src="/assets/images/Avatar 4.png"
@@ -105,8 +113,11 @@
         >
       </div>
     </section>
-    <section>
+
+    <!-- Section "Services" présentant les différents services offerts -->
+    <section class="modal-section">
       <div class="services" id="services">
+        <!-- ... contenu de la section "Services" ... -->
         <div class="container">
           <h1 class="sub-title">My <span>Services</span></h1>
           <div class="services-list">
@@ -187,7 +198,21 @@
       </div>
     </section>
 
+    <!-- Section pour la modale des services -->
+    <section class="modal-section">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <!-- Contenu de la modale -->
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section "Projets" montrant des exemples de travaux récents -->
     <section id="project">
+      <!-- ... contenu de la section "Projets" ... -->
       <div class="main-text">
         <h2>Latest<span> Project</span></h2>
         <div class="portfolio-content">
@@ -250,7 +275,10 @@
         </div>
       </div>
     </section>
+
+    <!-- Section "Contact" avec formulaire et informations de contact -->
     <section class="contact" id="contact">
+      <!-- ... contenu de la section "Contact" ... -->
       <div class="contact-text">
         <h2>Contact <span>Me</span></h2>
         <h4>Let's work Together</h4>
@@ -313,22 +341,22 @@
         </form>
       </div>
     </section>
-    <div class="last-text">
-      <p>
-        Developed with love by Grohens Christian © 2024 |
-        <a href="license.html" class="license-link">MIT License</a>
-      </p>
-    </div>
-    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
-    <script src="script.js"></script>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-text"></p>
-      </div>
-    </div>
 
+    <!-- Pied de page avec copyright et lien vers la licence -->
+    <footer>
+      <div class="last-text">
+        <!-- ... contenu du pied de page ... -->
+        <p>
+          Developed with love by Grohens Christian © 2024 |
+          <a href="license.html" class="license-link">MIT License</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bouton de retour en haut de page -->
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+    <script src="script.js"></script>
     <script src="modal.js"></script>
   </body>
 </html>
