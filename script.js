@@ -1,3 +1,4 @@
+// Typed.js configuration
 var typed = new Typed(".text", {
     strings: ["Web Developer", "Frontend Developer", "Freelance"],
     typeSpeed: 100,
@@ -6,26 +7,71 @@ var typed = new Typed(".text", {
     loop: true
 });
 
-// Ajoutez ce code à la fin du fichier script.js
 document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('.contact-form form');
+    // Formulaire en français
+    var formFr = document.querySelector('#contact-form');
+    var formMessageFr = document.getElementById('form-message');
 
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); // Empêche l'envoi standard du formulaire
+    if (formFr) {
+        formFr.addEventListener('submit', function (e) {
+            e.preventDefault(); // Empêche la soumission standard
 
-            // Envoie le formulaire
-            form.submit();
+            var formData = new FormData(formFr);
 
-            // Réinitialise le formulaire après un court délai
-            setTimeout(function () {
-                form.reset();
-            }, 100);
+            fetch('https://formspree.io/f/xwpejvql', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function (response) {
+                if (response.ok) {
+                    formMessageFr.style.display = 'block';
+                    formMessageFr.textContent = "Merci pour votre message, nous vous répondrons bientôt !"; // Affiche le message de confirmation français
+                    formFr.reset(); // Réinitialise le formulaire
+                } else {
+                    alert('Il y a eu une erreur, veuillez réessayer.');
+                }
+            }).catch(function (error) {
+                alert('Il y a eu une erreur, veuillez réessayer.');
+            });
+        });
+    }
+
+    // Formulaire en anglais
+    var formEn = document.querySelector('#contact-form-en');
+    var formMessageEn = document.getElementById('form-message-en');
+
+    if (formEn) {
+        formEn.addEventListener('submit', function (e) {
+            e.preventDefault(); // Empêche la soumission standard
+
+            var formData = new FormData(formEn);
+
+            fetch('https://formspree.io/f/xwpejvql', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function (response) {
+                if (response.ok) {
+                    formMessageEn.style.display = 'block';
+                    formMessageEn.textContent = "Thank you for your message, we will get back to you soon!"; // Affiche le message de confirmation anglais
+                    formEn.reset(); // Réinitialise le formulaire
+                } else {
+                    alert('There was an error, please try again.');
+                }
+            }).catch(function (error) {
+                alert('There was an error, please try again.');
+            });
         });
     }
 });
 
-// Ajout du code de défilement fluide
+
+
+// Smooth scrolling code
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
